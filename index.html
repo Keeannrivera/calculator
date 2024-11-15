@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="disp">0</div>
+        <div class="buttons">
+            <button class="bttn" onclick="clearDisplay()">AC</button>
+            <button class="bttn" onclick="deleteLast()">DEL</button>
+            <button class="bttn" oneclick="appendOperator('/')">/</button>
+            <button class="bttn" oneclick="appendOperator('+')">+</button>
+            <button class="bttn" onecliick="appendNumber('7')">7</button>
+            <button class="bttn" onecliick="appendNumber('8')">8</button>
+            <button class="bttn" onecliick="appendNumber('9')">9</button>
+            <button class="bttn" oneclick="appendOperator('-')">-</button>
+            <button class="bttn" onecliick="appendNumber('4')">4</button>
+            <button class="bttn" onecliick="appendNumber('5')">5</button>
+            <button class="bttn" onecliick="appendNumber('6')">6</button>
+            <button class="bttn" oneclick="appendOperator('*')">x</button>
+            <button class="bttn" onecliick="appendNumber('1')">1</button>
+            <button class="bttn" onecliick="appendNumber('2')">2</button>
+            <button class="bttn" onecliick="appendNumber('3')">3</button>
+            <button class="bttn" onecliick="appendNumber('0')">0</button>
+            <button class="bttn" onecliick="appendNumber('.')">.</button>
+            <button class="bttn" onecliick="appendNumber('0')">00</button>
+            <button class="bttn" onecliick="appendOperator('%')">%</button>
+            <button class="bttn" onecliick="calculate()">=</button>
+        </div>
+    </div>
+</body>
+</html>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 150vh;
+        background-color: antiquewhite;
+        font-family: Arial, sans-serif;
+    }
+
+    .calculator {
+        border: 1px solid #cac6c6c7;
+        border-radius: 16px;
+        padding: 25px;
+        background-color: #ffffffc9;
+        box-shadow: 0 0 10px #4b4b4be0;
+    }
+
+    .display {
+        font-size: 3em;
+        margin-bottom: 16px;
+        padding: 20px;
+        border: 1px solid white;
+        border-radius: 8px;
+        text-align: right;
+        background-color: #e0e0e0;
+    }
+
+    .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+    }
+
+    .bttn {
+        padding: 25px;
+        font-size: 1.8em;
+        border: none;
+        border-radius: 100px;
+        background-color: #a5c9c6be;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .bttn:hover {
+        background-color: #a19f9fa2;
+    }
+</style>
